@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "stream-each": "^1.2.2"
+  },
+  "devDependencies": {
+    "hypercore": "^6.17.1",
+    "random-access-memory": "^3.0.0",
+    "tape": "^4.9.1"
+  }
+}
