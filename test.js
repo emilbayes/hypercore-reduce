@@ -39,15 +39,29 @@ test('consturctor with opts', function (assert) {
   })
 })
 
+test('Destroy at error', function (assert) {
+  createFeed(function (err, feed) {
+    assert.error(err)
+
+    var dstrErr = new Error('Destroyed with error')
+    reduceCore(feed, (prev, cur, next) => next(dstrErr), {}, function (err) {
+      assert.equal(err, dstrErr)
+      assert.end()
+    })
+  })
+})
+
 test('returns destructor', function (assert) {
   createFeed(function (err, feed) {
     assert.error(err)
 
     var dstrErr = new Error('Destroyed with error')
-    var destroy = reduceCore(feed, _ => destroy(dstrErr), {}, function (err) {
+    var destroy = reduceCore(feed, _ => assert.end(new Error('Unreachable')), {}, function (err) {
       assert.equal(err, dstrErr)
       assert.end()
     })
+
+    destroy(dstrErr)
   })
 })
 
