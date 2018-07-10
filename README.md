@@ -1,5 +1,7 @@
 # `hypercore-reduce`
 
+[![Build Status](https://travis-ci.org/emilbayes/hypercore-reduce.svg?branch=master)](https://travis-ci.org/emilbayes/hypercore-reduce)
+
 > Reduce from an initial state as a function of a hypercore
 
 ## Usage
@@ -7,8 +9,9 @@
 ```js
 var reduce = require('hypercore-reduce')
 
+var initial = {}
 // Feed is a hypercore instance
-reduce(feed, reducer, {}, done)
+reduce(feed, reducer, initial, done)
 
 function reducer (prevState, curState, next) {
   return next(null, Object.assign(prevState, curState))
@@ -19,7 +22,6 @@ function done (err, finalState) {
 
   console.log(finalState)
 }
-
 ```
 
 ## API
