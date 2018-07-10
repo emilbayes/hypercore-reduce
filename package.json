@@ -1,4 +1,8 @@
 {
+  "name": "hypercore-reduce",
+  "version": "0.0.0",
+  "description": "Reduce from an initial state as a function of a hypercore",
+  "main": "index.js",
   "dependencies": {
     "stream-each": "^1.2.2"
   },
@@ -6,5 +10,21 @@
     "hypercore": "^6.17.1",
     "random-access-memory": "^3.0.0",
     "tape": "^4.9.1"
-  }
+  },
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilbayes/hypercore-reduce.git"
+  },
+  "keywords": [
+
+  ],
+  "author": "Emil Bay <github@tixz.dk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilbayes/hypercore-reduce/issues"
+  },
+  "homepage": "https://github.com/emilbayes/hypercore-reduce#readme"
 }
