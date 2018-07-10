@@ -1,6 +1,6 @@
 {
   "name": "hypercore-reduce",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Reduce from an initial state as a function of a hypercore",
   "main": "index.js",
   "dependencies": {
@@ -18,9 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/emilbayes/hypercore-reduce.git"
   },
-  "keywords": [
-
-  ],
+  "keywords": [],
   "author": "Emil Bay <github@tixz.dk>",
   "license": "ISC",
   "bugs": {
